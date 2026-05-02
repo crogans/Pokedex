@@ -57,3 +57,25 @@
   padding: 2rem;
   display: none;
 }
+
+/* Loading Spinner */
+#loading {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+.spinner {
+  border: 0.25rem solid #f3f3f3;
+  border-top: 0.25rem solid #C03028;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+  /* Spinner animation */
+  @keyframes spin {
+  to { transform: rotate(360deg); }
+}

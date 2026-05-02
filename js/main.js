@@ -8,6 +8,9 @@ const pokemonDetails = await Promise.all(
     pokemonList.map(pokemon => getPokemon(pokemon.name))
 )
 
+// Hides the loading message once all Pokemon details have been fetched */
+document.getElementById("loading").style.display = "none"
+
 // Displays the Pokemon details on the page
 const pokemonContainer = document.getElementById("pokemon")
 

@@ -13,12 +13,19 @@
 </head>
 
 <body>
-    <h1>Pokédex</h1>
+  <h1>Pokédex</h1>
 
-    <!-- Search Function -->
-    <input type="text" id="search" placeholder="Search for a Pokémon...">
-    <p id="no-results">No Pokémon were found.</p>
+  <!-- Search Function -->
+  <input type="text" id="search" placeholder="Search for a Pokémon...">
+  <p id="no-results">No Pokémon were found.</p>
 
-    <div id="pokemon"></div>
+  <div id="pokemon"></div>
+
+  <!-- Loading Spinner while fetching data -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Loading Pokémon...</p>
+  </div>
 </body>
+
 </html>
