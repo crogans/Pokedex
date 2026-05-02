@@ -8,9 +8,9 @@ const pokemonDetails = await Promise.all(
     pokemonList.map(pokemon => getPokemon(pokemon.name))
 )
 
+// Displays the Pokemon details on the page
 const pokemonContainer = document.getElementById("pokemon")
 
-// Displays the Pokemon details on the page
 pokemonDetails.forEach(pokemon => {
     const pokemonCard = document.createElement("div")
     pokemonCard.classList.add("pokemon-card")
@@ -28,4 +28,21 @@ pokemonDetails.forEach(pokemon => {
   `
 
     pokemonContainer.appendChild(pokemonCard)
+})
+
+// Search functionality
+const searchInput = document.getElementById("search")
+const noResults = document.getElementById("no-results")
+
+searchInput.addEventListener("input", () => {
+  const searchTerm = searchInput.value.toLowerCase()
+  const filteredPokemon = pokemonDetails.filter(pokemon => pokemon.name.includes(searchTerm))
+
+  document.querySelectorAll(".pokemon-card").forEach((card, index) => {
+    const name = pokemonDetails[index].name
+    card.style.display = name.includes(searchTerm) ? "block" : "none"
+  })
+
+  // Shows the "No Pokémon were found." message if there are no matches, otherwise hides it
+  noResults.style.display = filteredPokemon.length === 0 ? "block" : "none"
 })

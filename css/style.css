@@ -49,3 +49,11 @@
 .rock { background-color: #B8A038; }
 .bug { background-color: #A8B820; }
 .steel { background-color: #B8B8D0; }
+
+/* No results message */
+#no-results {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem;
+  display: none;
+}
