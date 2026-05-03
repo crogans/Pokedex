@@ -50,6 +50,11 @@
 .bug { background-color: #A8B820; }
 .steel { background-color: #B8B8D0; }
 
+/* Type Filter */
+.type-btn {
+  text-transform: capitalize;
+}
+
 /* No results message */
 #no-results {
   text-align: center;
