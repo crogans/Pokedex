@@ -8,12 +8,19 @@
 
   <title>Pokédex</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
-  <h1>Pokédex</h1>
+  <header>
+    <h1><a href="index.html">Pokédex</a></h1>
+  </header>
 
   <!-- Search Function -->
   <input type="text" id="search" placeholder="Search for a Pokémon...">
@@ -24,14 +31,14 @@
   <!-- No Results Message -->
   <p id="no-results">No Pokémon were found.</p>
 
-  <!-- Pokémon Container -->
-  <div id="pokemon"></div>
-
   <!-- Loading Spinner while fetching data -->
   <div id="loading">
     <div class="spinner"></div>
     <p>Loading Pokémon...</p>
   </div>
+
+  <!-- Pokémon Container -->
+  <div id="pokemon"></div>
 
   <!-- Pokémon Detail Popup -->
   <div id="pokemon-popup-container">
