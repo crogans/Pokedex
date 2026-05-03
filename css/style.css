@@ -51,8 +51,25 @@
 .steel { background-color: #B8B8D0; }
 
 /* Type Filter */
+#type-filter {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1875rem;
+}
+
 .type-btn {
   text-transform: capitalize;
+  margin: 0.25rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.type-btn.active {
+  outline: 0.1875rem solid #C03028;
+  font-weight: bold;
 }
 
 /* No results message */
